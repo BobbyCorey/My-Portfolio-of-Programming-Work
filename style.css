@@ -1,20 +1,19 @@
-﻿/* Reset default browser styles */
+﻿/* === Reset default browser styles === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body style */
+/* === Base Body Styling === */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding: 0;
 }
 
-/* Header and Navigation */
+/* === Header and Navigation === */
 header {
     background-color: #333;
     color: #fff;
@@ -48,25 +47,44 @@ nav ul {
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             }
 
-/* Intro Section */
+/* === Intro Section === */
 .intro {
-    text-align: center;
-    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-    .intro h1 {
+.intro-text {
+    flex: 1 1 400px;
+    text-align: left;
+}
+
+    .intro-text h1 {
         font-size: 48px;
         margin-bottom: 20px;
     }
 
-    .intro p {
+    .intro-text p {
         font-size: 20px;
+        margin-bottom: 15px;
     }
 
-/* Projects Page design */
+/* === Optional profile image support === */
+.intro-photo img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === Projects Section === */
 .projects {
     display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap into new lines */
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
     padding: 0 20px;
@@ -80,7 +98,7 @@ nav ul {
         text-align: center;
     }
 
-/* Project card styling */
+/* === Project Card Styling === */
 .project-card {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -92,13 +110,11 @@ nav ul {
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    width: 50%; /* This ensures two cards per row */
-    margin: 10px; /* Space between cards */
-    max-width: 450px; /* Max width for each card */
-    box-sizing: border-box;
+    width: 50%;
+    margin: 10px;
+    max-width: 450px;
 }
 
-    /* Card hover effects */
     .project-card:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -131,7 +147,6 @@ nav ul {
         border-radius: 30px;
         font-size: 18px;
         transition: all 0.3s ease;
-        text-align: center;
     }
 
         .project-card .btn:hover {
@@ -139,7 +154,7 @@ nav ul {
             transform: scale(1.1);
         }
 
-/* Footer */
+/* === Footer === */
 footer {
     text-align: center;
     margin-top: 50px;
@@ -148,14 +163,27 @@ footer {
     font-size: 14px;
 }
 
-/* Media Queries for Mobile */
+/* === Responsive Design === */
 @media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
     .projects {
-        flex-direction: column; /* Stack the cards vertically */
+        flex-direction: column;
     }
 
     .project-card {
-        width: 100%; /* Full width for smaller screens */
-        margin: 10px 0; /* Adjust margin for mobile */
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .intro-photo img {
+        width: 180px;
     }
 }
