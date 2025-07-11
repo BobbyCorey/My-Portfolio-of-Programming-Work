@@ -1,0 +1,177 @@
+﻿/* Hangman Game Project Page Styles */
+
+/* Body Style */
+body {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header Style */
+header {
+    background-color: #222; /* Slightly darker */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff5733; /* Bold border color */
+}
+
+    header h1 {
+        font-size: 3rem;
+        color: #ff5733; /* Bold color to match theme */
+        font-family: 'Comic Sans MS', sans-serif; /* Fun font for the project name */
+    }
+
+/* Hero Section with Image and Heading */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #444; /* Slightly lighter background */
+}
+
+    .hero img {
+        max-width: 100%;
+        width: 60%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+        .hero img:hover {
+            transform: scale(1.05);
+        }
+
+    .hero h2 {
+        font-size: 2rem;
+        color: #ffd700; /* Gold/yellow text to match the fun vibe */
+    }
+
+/* Project Details (Description) */
+.project-details {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+    .project-details p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .project-details a.btn {
+        background-color: #ff5733;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+        .project-details a.btn:hover {
+            background-color: #ff8c00;
+        }
+
+/* Showcase Section with Screenshots */
+.showcase {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+    .showcase img {
+        width: 45%;
+        max-width: 400px;
+        border-radius: 10px;
+        margin: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+        .showcase img:hover {
+            transform: scale(1.05);
+        }
+
+/* Code Snippet Section */
+.code-snippets {
+    background-color: #555;
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+    .code-snippets h3 {
+        color: #ffd700;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .code-snippets pre {
+        background-color: #333;
+        padding: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 10px;
+        overflow-x: auto;
+        color: #fff;
+    }
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #666;
+    font-size: 1rem;
+    color: #fff;
+}
+
+    footer p {
+        font-size: 1rem;
+    }
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    padding-top: 100px;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #ddd;
+        text-decoration: none;
+        cursor: pointer;
+    }

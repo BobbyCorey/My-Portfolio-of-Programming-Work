@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="hangman.css"> <!-- Link to your custom CSS for this page -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Hangman Game</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/NewGame.png" alt="Hangman Game Screenshot" class="project-image" onclick="openModal(this)">
+        <h2>Can you guess the word before the hangman is fully drawn?</h2>
+    </section>
+
+    <!-- Project Details Section -->
+    <section class="project-details">
+        <p>
+            This Hangman game was built using HTML, CSS, and JavaScript. The objective is to guess the word by selecting letters one at a time. 
+            If too many incorrect guesses are made, the hangman figure is drawn. It was a fun project to practice DOM manipulation, JavaScript functions, and creating interactive gameplay.
+        </p>
+        <a href="link-to-live-demo" class="btn">Play the Game</a>
+    </section>
+
+    <!-- Showcase Section (Game Screenshots) -->
+    <section class="showcase">
+        <h3>Game Screenshots</h3>
+        <img src="images/Hangman_ingame.png" alt="In-Progress Hangman Game" class="project-image" onclick="openModal(this)">
+        <img src="images/Hangman_win.png" alt="Hangman Game - Lost" class="project-image" onclick="openModal(this)">
+    </section>
+
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Code Snippets -->
+    <section class="code-snippets">
+        <h3>Code Example</h3>
+        <pre><code>
+            function checkGuess(letter) {
+                if (word.includes(letter)) {
+                    // Handle correct guess
+                } else {
+                    // Handle incorrect guess
+                }
+            }
+        </code></pre>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Technologies used: HTML, CSS, JavaScript</p>
+        <p>&copy; 2025 Bobby Corey. All rights reserved.</p>
+    </footer>
+
+    <script src="hangmanModal.js"></script>
+</body>
+</html>
