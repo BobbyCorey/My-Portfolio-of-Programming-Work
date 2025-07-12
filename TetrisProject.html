@@ -3,45 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tetris Game</title>
-    <link rel="stylesheet" href="hangman.css"> <!-- Reuse your portfolio CSS -->
+    <link rel="stylesheet" href="hangman.css"> <!-- You can reuse the same CSS -->
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-        </nav>
+        <h1>Tetris Game</h1>
     </header>
 
-    <main class="project-details">
-        <section class="intro">
-            <h1>Unity Tetris Game</h1>
-            <p>This is my WebGL build of Tetris, made with Unity. It's a fully playable, classic-style Tetris clone featuring block rotations, score tracking, and game-over conditions.</p>
-            <p>Try it out below!</p>
-            <a class="btn" href="https://bobbycorey.github.io/unity-tetris/" target="_blank">Play the Game</a>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>A modern twist on a classic puzzle game!</h2>
+    </section>
 
-        <section class="showcase">
-            <h2>Game Preview</h2>
-            <img src="images/tetris_thumbnail.png" alt="Tetris Gameplay Screenshot" class="project-image">
-        </section>
+    <!-- Project Details Section -->
+    <section class="project-details">
+        <p>
+            This Tetris game was built using Unity and exported for WebGL. It showcases block-dropping mechanics, line-clearing logic, score tracking, and real-time interaction.
+            Developed as a passion project, it allowed me to apply C# scripting and Unity’s UI systems to create a polished and responsive gameplay experience.
+        </p>
+        <p>
+            The project was a great way to practice working with Unity’s game loop, collision systems, and build pipeline for browser deployment.
+        </p>
+        <a href="https://bobbycorey.github.io/unity-tetris/" class="btn">Play the Game</a>
+    </section>
 
-        <section class="tech-used">
-            <h3>Technologies Used</h3>
-            <ul>
-                <li>Unity with C#</li>
-                <li>WebGL Export</li>
-                <li>GitHub Pages for Hosting</li>
-            </ul>
-        </section>
-    </main>
+    <!-- Showcase Section (Placeholder for future screenshots) -->
+    <section class="showcase">
+        <h3>Game Screenshots</h3>
+        <p>Screenshots coming soon!</p>
+    </section>
 
+    <!-- Code Snippets -->
+    <section class="code-snippets">
+        <h3>Code Example</h3>
+        <pre><code>
+            public void ClearFullLines()
+            {
+                for (int y = height - 1; y >= 0; y--) {
+                    if (IsLineFull(y)) {
+                        DeleteLine(y);
+                        MoveAllRowsDown(y);
+                        y++;
+                    }
+                }
+            }
+        </code></pre>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
+        <p>Technologies used: Unity, C#, WebGL</p>
         <p>&copy; 2025 Bobby Corey. All rights reserved.</p>
     </footer>
 
