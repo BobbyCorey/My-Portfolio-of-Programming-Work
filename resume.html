@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bobby Corey - Resume</title> <!-- BC (Descriptive title) -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Additional small tweaks for the resume page */
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .download-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 12px 20px;
+            background-color: #007acc;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+            .download-link:hover {
+                background-color: #005f99;
+            }
+
+        h1, h2 {
+            color: #222;
+        }
+
+        section.resume-section {
+            margin-bottom: 40px;
+        }
+
+        ul.skills-list {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">My Projects</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="webresearch.html">Debugging Research</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="title-page" style="text-align:center; margin-top:50px;">
+            <h1>Bobby Corey</h1>
+            <h2>Programming Resume</h2>
+            <p>Email: <a href="mailto:bobbycorey@cn.edu">bobbycorey@cn.edu</a></p>
+
+            <!-- Download Resume Button -->
+            <a href="files/BobbyCorey_Resume.pdf" download class="download-link" aria-label="Download Bobby Corey's Resume PDF">
+                Download Resume (PDF)
+            </a>
+        </section>
+
+        <!-- Resume Content -->
+        <section class="resume-section">
+            <h2>Summary</h2>
+            <p>
+                Junior developer completing an Associate’s Degree in Computer Information Systems and Computer Programming.
+                Skilled in C#, C++, Java, Python, and JavaScript with experience building games and interactive applications using Unity and Unreal Engine.
+                Passionate about problem-solving, continuous learning, and contributing to innovative tech projects.
+            </p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Programming Languages: C#, C++, Java, Python, JavaScript</li>
+                <li>Game Engines & Tools: Unity, Unreal Engine, Blender, GitHub</li>
+                <li>Web Development: HTML5, CSS3, JavaScript</li>
+                <li>Software Development: Windows Forms, Visual Studio, Git</li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Education</h2>
+            <p><strong>Central New Mexico Community College (CNM)</strong> — Associate’s Degree in Computer Information Systems/Programming</p>
+            <p>Expected Graduation: 2025</p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Hangman Game (JavaScript/HTML/CSS):</strong> Web-based game implementing dynamic UI and game logic.</li>
+                <li><strong>Tetris Game (JavaScript/HTML Canvas):</strong> Classic game with optimized rendering and input handling.</li>
+                <li><strong>Unity Paintball Game:</strong> 3D multiplayer paintball shooter with AI enemies and UI.</li>
+                <li><strong>Sword Art Online VR Project:</strong> VR game development for Meta Quest, focusing on immersive interaction.</li>
+                <li><strong>Rocket League Crate Plugin:</strong> BakkesMod plugin recreating classic crate animation (in progress).</li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:bobbycorey@cn.edu">bobbycorey@cn.edu</a></p>
+            <p>GitHub: <a href="https://github.com/bobbycorey" target="_blank" rel="noopener noreferrer">https://github.com/bobbycorey</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bobby Corey. All rights reserved.</p>
+    </footer>
+</body>
+</html>
