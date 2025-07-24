@@ -97,7 +97,11 @@ nav ul {
 
 /* Category container spacing */
 .project-category {
-    margin-bottom: 3rem;
+    border-left: 4px solid #00aaff; /* blue vertical line */
+    padding-left: 12px; /* space between line and text */
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: #0077cc;
 }
 
 /* New row wrapper for horizontal cards */
