@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bobby Corey - Resume</title> <!-- BC (Descriptive title) -->
+    <title>Bobby Corey - Resume</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-        /* Additional small tweaks for the resume page */
         main {
             max-width: 800px;
             margin: 50px auto;
@@ -37,9 +36,20 @@
             margin-bottom: 40px;
         }
 
-        ul.skills-list {
+        ul.skills-list, ul.project-list {
             list-style-type: disc;
             margin-left: 20px;
+        }
+
+        p.contact-info {
+            margin: 0;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ccc;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -60,55 +70,99 @@
         <section id="title-page" style="text-align:center; margin-top:50px;">
             <h1>Bobby Corey</h1>
             <h2>Programming Resume</h2>
-            <p>Email: <a href="mailto:bobbycorey@cn.edu">bobbycorey@cn.edu</a></p>
+            <p class="contact-info">10600 Cibola Loop NW Apt #728, Albuquerque, NM 87520</p>
+            <p class="contact-info">(575) 209 0688 • <a href="mailto:Gamerc111@gmail.com">Gamerc111@gmail.com</a></p>
+            <p class="contact-info">GitHub: <a href="https://github.com/bobbycorey" target="_blank" rel="noopener noreferrer">https://github.com/bobbycorey</a></p>
+            <p class="contact-info">Portfolio: <a href="https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/" target="_blank" rel="noopener noreferrer">https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/</a></p>
 
-            <!-- Download Resume Button -->
-            <a href="files/BobbyCorey_Resume.pdf" download class="download-link" aria-label="Download Bobby Corey's Resume PDF">
+            
+            <a href="https://github.com/BobbyCorey/My-Portfolio-of-Programming-Work/blob/master/Downloadables/BobbyCorey_Resume_EpicGames.docx%20(1).pdf" download class="download-link" aria-label="Download Bobby Corey's Resume PDF">
                 Download Resume (PDF)
             </a>
+            
         </section>
 
-        <!-- Resume Content -->
+        <hr />
+
         <section class="resume-section">
-            <h2>Summary</h2>
+            <h2>Targeted Objective</h2>
             <p>
-                Junior developer completing an Associate’s Degree in Computer Information Systems and Computer Programming.
-                Skilled in C#, C++, Java, Python, and JavaScript with experience building games and interactive applications using Unity and Unreal Engine.
-                Passionate about problem-solving, continuous learning, and contributing to innovative tech projects.
+                Computer Information Systems graduate with hands-on experience in game development and software testing (Unity, C#, C++).
+                Seeking the Tester III position at Epic Games to apply my skills in test case execution, bug analysis, and quality assurance for Unreal Engine production.
             </p>
         </section>
 
-        <section class="resume-section">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Programming Languages: C#, C++, Java, Python, JavaScript</li>
-                <li>Game Engines & Tools: Unity, Unreal Engine, Blender, GitHub</li>
-                <li>Web Development: HTML5, CSS3, JavaScript</li>
-                <li>Software Development: Windows Forms, Visual Studio, Git</li>
-            </ul>
-        </section>
+        <hr />
 
         <section class="resume-section">
             <h2>Education</h2>
-            <p><strong>Central New Mexico Community College (CNM)</strong> — Associate’s Degree in Computer Information Systems/Programming</p>
-            <p>Expected Graduation: 2025</p>
+            <p>
+                <strong>Associate of Applied Science – Computer Information Systems / Computer Programming</strong><br />
+                [Your College Name], Albuquerque, NM<br />
+                Expected Graduation: Spring 2025
+            </p>
+            <p>Relevant Coursework: Software Testing & Debugging · Object-Oriented Programming · Game Development with Unity</p>
         </section>
 
+        <hr />
+
         <section class="resume-section">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Hangman Game (JavaScript/HTML/CSS):</strong> Web-based game implementing dynamic UI and game logic.</li>
-                <li><strong>Tetris Game (JavaScript/HTML Canvas):</strong> Classic game with optimized rendering and input handling.</li>
-                <li><strong>Unity Paintball Game:</strong> 3D multiplayer paintball shooter with AI enemies and UI.</li>
-                <li><strong>Sword Art Online VR Project:</strong> VR game development for Meta Quest, focusing on immersive interaction.</li>
-                <li><strong>Rocket League Crate Plugin:</strong> BakkesMod plugin recreating classic crate animation (in progress).</li>
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li>Programming: C#, C++, Python (basic), JavaScript</li>
+                <li>Game Engines: Unity (C#), Unreal Engine (introductory)</li>
+                <li>Testing & QA: Manual test case execution · Bug reporting · Regression testing · Jira (familiar)</li>
+                <li>Tools: Visual Studio · Git version control · Blender · Microsoft Office · Chrome DevTools</li>
             </ul>
         </section>
 
+        <hr />
+
         <section class="resume-section">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:bobbycorey@cn.edu">bobbycorey@cn.edu</a></p>
-            <p>GitHub: <a href="https://github.com/bobbycorey" target="_blank" rel="noopener noreferrer">https://github.com/bobbycorey</a></p>
+            <h2>Relevant Experience</h2>
+            <p><strong>Freelance Game Developer & QA (Self-Initiated) — 2021 – Present</strong></p>
+            <ul class="project-list">
+                <li>Executed detailed test plans and manual test cases for Unity game builds, identifying gameplay and performance bugs.</li>
+                <li>Documented issues with clear reproduction steps and communicated findings effectively for fixes.</li>
+                <li>Applied iterative debugging and regression testing to maintain stable builds across development cycles.</li>
+            </ul>
+        </section>
+
+        <hr />
+
+        <section class="resume-section">
+            <h2>Game & Software Projects</h2>
+            <ul class="project-list">
+                <li><strong>Unity Gameplay Prototypes:</strong> Developed multiple 2D/3D games using Unity and C#, including player controls, collision detection, UI, and core mechanics.</li>
+                <li>Conducted repeated testing, resolved bugs, and optimized gameplay for smooth user experiences.</li>
+                <li>Utilized Git version control and project organization best practices to track changes and collaborate.</li>
+                <li><strong>C# Local Web Application:</strong> Built a desktop-accessible C# web application with integrated UI and backend logic.</li>
+                <li>Performed manual testing on user input flows, form validation, and error handling to ensure robustness.</li>
+                <li><strong>Unreal Engine Exploration:</strong> Independently studied Unreal Engine fundamentals, focusing on level navigation, scripting basics, and debugging tools.</li>
+            </ul>
+        </section>
+
+        <hr />
+
+        <section class="resume-section">
+            <h2>Portfolio Highlights</h2>
+            <ul class="project-list">
+                <li>Maintained an actively updated online portfolio showcasing projects in web development, Unity games, and coding assignments.</li>
+                <li>Portfolio features live playable demos, source code links, and screenshots that demonstrate technical skills and creative problem-solving.</li>
+                <li>Website: <a href="https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/" target="_blank" rel="noopener noreferrer">https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/</a></li>
+            </ul>
+        </section>
+
+        <hr />
+
+        <section class="resume-section">
+            <h2>Additional Strengths</h2>
+            <ul class="project-list">
+                <li>Analytical problem solver with strong attention to detail</li>
+                <li>Effective written and verbal communication skills</li>
+                <li>Comfortable working in collaborative, fast-paced team environments</li>
+                <li>Passionate about ensuring immersive, high-quality gaming experiences</li>
+            </ul>
         </section>
     </main>
 
