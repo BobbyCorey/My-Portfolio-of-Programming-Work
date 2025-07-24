@@ -121,7 +121,7 @@ nav ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     flex: 1 1 300px; /* flexible base width */
-    max-width: 350px; /* max width */
+    max-width: 300px; /* max width */
     margin: 10px 0;
 }
 
