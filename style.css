@@ -101,11 +101,12 @@ nav ul {
 }
 
     .project-category h2 {
-        border-left: 4px solid #00aaff; /* bright blue line */
-        padding-left: 12px;
-        margin-bottom: 1rem;
-        font-weight: 600;
-        color: #0077cc; /* optional blue text color */
+        border-left: 4px solid #00aaff; /* blue vertical line */
+        padding-left: 12px; /* spacing between line and text */
+        margin-block-start: 0.83em; /* keep your default vertical margins */
+        margin-block-end: 0.83em;
+        font-weight: bold; /* or 600 if you want slightly lighter */
+        color: #0077cc; /* optional: blue text to match */
     }
 
 /* New row wrapper for horizontal cards */
