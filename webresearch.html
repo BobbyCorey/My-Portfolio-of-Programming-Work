@@ -20,6 +20,18 @@
         code {
             font-size: 0.9rem;
         }
+
+        .doc-screenshot {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .doc-links ul {
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -51,10 +63,19 @@
                 <pre><code>git lfs install
 git lfs track "*.unitypackage"
 git add .gitattributes
-git add <large files>
+git add &lt;large files&gt;
 git commit -m "Track large assets with Git LFS"
 git push origin main
                 </code></pre>
+                <p><strong>Documentation Screenshot:</strong></p>
+                <img src="images/git-lfs-doc-screenshot.png" alt="Git LFS documentation excerpt" class="doc-screenshot" />
+                <div class="doc-links">
+                    <p><strong>Links:</strong></p>
+                    <ul>
+                        <li><a href="https://git-lfs.github.com/" target="_blank" rel="noopener noreferrer">Git LFS Official Website</a></li>
+                        <li><a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage" target="_blank" rel="noopener noreferrer">GitHub Docs: Managing Large Files</a></li>
+                    </ul>
+                </div>
 
                 <h2>2. VR Voice Recognition Failure (Quest 1)</h2>
                 <p><strong>Problem:</strong> Meta Quest 1 did not support speech recognition using Android’s native API because the required voice service was missing.</p>
@@ -63,7 +84,7 @@ git push origin main
                 <pre><code>using System.Net.Http;
 using System.Threading.Tasks;
 
-async Task<string> SendAudioToWitAi(byte[] audioData) {
+async Task&lt;string&gt; SendAudioToWitAi(byte[] audioData) {
     var httpClient = new HttpClient();
     httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer YOUR_WIT_AI_TOKEN");
     var content = new ByteArrayContent(audioData);
@@ -71,6 +92,15 @@ async Task<string> SendAudioToWitAi(byte[] audioData) {
     return await response.Content.ReadAsStringAsync();
 }
                 </code></pre>
+                <p><strong>Documentation Screenshot:</strong></p>
+                <img src="images/quest-voice-recognition-forum.png" alt="Oculus Quest voice recognition forum discussion" class="doc-screenshot" />
+                <div class="doc-links">
+                    <p><strong>Links:</strong></p>
+                    <ul>
+                        <li><a href="https://forums.oculusvr.com/developer/category/65/quest" target="_blank" rel="noopener noreferrer">Oculus Developer Forum - Quest Voice Recognition</a></li>
+                        <li><a href="https://wit.ai/docs/http/20200513/" target="_blank" rel="noopener noreferrer">Wit.ai API Documentation</a></li>
+                    </ul>
+                </div>
 
                 <h2>Takeaway</h2>
                 <p>
