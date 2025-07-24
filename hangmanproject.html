@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Hangman Game</title>
-    <link rel="stylesheet" href="hangman.css"> <!-- Link to your custom CSS for this page -->
+    <link rel="stylesheet" href="hangman.css" />
 </head>
 <body>
 
@@ -20,43 +20,69 @@
         <h2>Can you guess the word before the hangman is fully drawn?</h2>
     </section>
 
-    <!-- Project Details Section -->
+    <!-- Project Details -->
     <section class="project-details">
         <p>
-            This Hangman game was built using HTML, CSS, and JavaScript. The objective is to guess the word by selecting letters one at a time. 
-            If too many incorrect guesses are made, the hangman figure is drawn. It was a fun project to practice DOM manipulation, JavaScript functions, and creating interactive gameplay.
+            This Hangman game was built using HTML, CSS, and JavaScript. The game uses JavaScript classes for managing the game state and handles player interaction through a responsive GUI. DOM manipulation updates the board dynamically as the user guesses letters.
+        </p>
+        <p>
+            This project helped reinforce concepts such as conditionals, loops, event listeners, and modular design. No database was used; all word data is stored in-memory.
+        </p>
+        <p>
+            Inspiration came from classic word-guessing games. I researched how to create modal popups for images, and how to manage game state using JS classes (see code below).
         </p>
         <a href="https://bobbycorey.github.io/hangman_game/" class="btn">Play the Game</a>
     </section>
 
-    <!-- Showcase Section (Game Screenshots) -->
+    <!-- Game Screenshots -->
     <section class="showcase">
         <h3>Game Screenshots</h3>
         <img src="images/Hangman_ingame.PNG" alt="In-Progress Hangman Game" class="project-image" onclick="openModal(this)">
         <img src="images/Hangman_win.PNG" alt="Hangman Game - Lost" class="project-image" onclick="openModal(this)">
     </section>
 
-    <!-- Modal for Enlarged Image -->
+    <!-- Modal -->
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
 
-    <!-- Code Snippets -->
+    <!-- Code Snippets Section -->
     <section class="code-snippets">
-        <h3>Code Example</h3>
-        <pre><code>
-            function checkGuess(letter) {
-                if (word.includes(letter)) {
-                    // Handle correct guess
-                } else {
-                    // Handle incorrect guess
-                }
-            }
-        </code></pre>
+        <h3>Highlighted Code Sample</h3>
+        <p>Here’s a class-based structure used to manage the game state:</p>
+        <pre><code class="language-js">
+// GUI logic and game state
+class HangmanGame {
+  constructor(wordList) {
+    this.wordList = wordList;
+    this.resetGame();
+  }
+
+  resetGame() {
+    this.word = this.getRandomWord();
+    this.correctGuesses = [];
+    this.incorrectGuesses = [];
+  }
+
+  getRandomWord() {
+    const index = Math.floor(Math.random() * this.wordList.length);
+    return this.wordList[index];
+  }
+
+  checkGuess(letter) {
+    if (this.word.includes(letter)) {
+      this.correctGuesses.push(letter);
+    } else {
+      this.incorrectGuesses.push(letter);
+    }
+  }
+}
+    </code></pre>
+        <p>This approach demonstrates the use of JavaScript <strong>classes</strong>, <strong>inheritance-ready structure</strong>, and encapsulation of logic.</p>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
         <p>Technologies used: HTML, CSS, JavaScript</p>
         <p>&copy; 2025 Bobby Corey. All rights reserved.</p>
