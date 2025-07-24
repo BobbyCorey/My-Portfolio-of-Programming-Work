@@ -1,45 +1,85 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="projects.css" />
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">My Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
-        </nav>
+        <h1>My Projects</h1>
+        <p>Explore a variety of projects developed across different disciplines and technologies.</p>
     </header>
 
     <main>
-        <section class="projects">
-            <h1>My Projects</h1>
-            <div class="project-card">
-                <h2>Hangman Game</h2>
-                <p>A fun, interactive Hangman game built with HTML, CSS, and JavaScript.</p>
-                <a href="hangmanproject.html" class="btn">View Project</a>
+        <!-- Web Development Projects -->
+        <section>
+            <h2>🌐 Web Development Projects</h2>
+            <div class="project-category">
+                <div class="project-card">
+                    <h3>Hangman Game 🟢</h3>
+                    <p>A browser-based Hangman game with score tracking and rounds.</p>
+                    <a href="hangmanproject.html" class="project-button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Tetris Game 🟢</h3>
+                    <p>A fully functional Tetris clone using HTML5 Canvas and JavaScript.</p>
+                    <a href="TetrisProject.html" class="project-button">View Project</a>
+                </div>
+                <!-- Add more web projects here -->
             </div>
-            <div class="project-card">
-                <h2>Pac-Man 3D</h2>
-                <p>Coming soon: A fresh 3D take on the classic retro Pacman experience — currently a work in progress!</p>
-                <a href="#" class="btn">Coming Soon</a>
+        </section>
+
+        <!-- Game Development Projects -->
+        <section>
+            <h2>🎮 Game Development Projects</h2>
+            <div class="project-category">
+                <div class="project-card">
+                    <h3>Unity Paintball Game 🟢</h3>
+                    <p>A 5v5 paintball shooter with custom AI, gunplay, and UI systems.</p>
+                    <a href="paintballproject.html" class="project-button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>SAO VR Project 🟡</h3>
+                    <p>A VR game inspired by Sword Art Online for Meta Quest 1. Currently in development.</p>
+                    <a href="saovrproject.html" class="project-button">View Project</a>
+                </div>
             </div>
-            <div class="project-card">
-                <h2>Tetris The Game</h2>
-                <p>Rebuilding the original game of Testris using C# coding and Unity!</p>
-                <a href="TetrisProject.html" class="btn">View Project</a>
+        </section>
+
+        <!-- Scripting / Tools Projects -->
+        <section>
+            <h2>🛠️ Scripting / Tools Projects</h2>
+            <div class="project-category">
+                <div class="project-card">
+                    <h3>Rocket League Crate Plugin 🔴</h3>
+                    <p>A nostalgic plugin for BakkesMod aiming to replicate the original crate animation. (Unfinished)</p>
+                    <a href="cratepluginproject.html" class="project-button">View Project</a>
+                </div>
             </div>
-            <div class="project-card">
-                <h2>Vehicle Video Game</h2>
-                <p>A start to a video game I was planning to develop in Unity using C# code!</p>
-                <a href="#" class="btn">Coming Soon</a>
+        </section>
+
+        <!-- Programming Fundamentals -->
+        <section>
+            <h2>📚 Programming Fundamentals</h2>
+            <div class="project-category">
+                <div class="project-card">
+                    <h3>Test Scores App 🟢</h3>
+                    <p>A simple app for managing test scores, grading, and statistics. Written in JavaScript.</p>
+                    <a href="testscoresproject.html" class="project-button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>C++ & Java Projects 🟢</h3>
+                    <p>A collection of coursework including console apps, calculators, and small games.</p>
+                    <a href="courseworkprojects.html" class="project-button">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Python Scripts 🟢</h3>
+                    <p>Includes automation scripts, CLI tools, and text analyzers from various classes.</p>
+                    <a href="pythonscripts.html" class="project-button">View Project</a>
+                </div>
             </div>
         </section>
     </main>
