@@ -97,12 +97,16 @@ nav ul {
 
 /* Category container spacing */
 .project-category {
-    border-left: 4px solid #00aaff; /* blue vertical line */
-    padding-left: 12px; /* space between line and text */
-    margin-bottom: 1rem;
-    font-weight: 600;
-    color: #0077cc;
+    margin-bottom: 3rem;
 }
+
+    .project-category h2 {
+        border-left: 4px solid #00aaff; /* bright blue line */
+        padding-left: 12px;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        color: #0077cc; /* optional blue text color */
+    }
 
 /* New row wrapper for horizontal cards */
 .project-row {
