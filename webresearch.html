@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
-    <title>Web Research & Debugging</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Debugging & Research - Bobby Corey Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
@@ -12,61 +13,43 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">My Projects</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                <li><a href="webresearch.html">Debugging Research</a></li>
+                <li><a href="webresearch.html" class="active">Debugging Research</a></li>
                 <li><a href="about.html">About Me</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>Web Research & Debugging</h1>
+    <main style="max-width: 800px; margin: 50px auto; padding: 0 20px;">
+        <h1 style="text-align: center;">Debugging & Web Research</h1>
+        <p>
+            As part of my development journey, I frequently encountered bugs and roadblocks that required in-depth debugging and research.
+            Here are a couple of real examples that highlight how I tackled those situations:
+        </p>
 
-        <div class="example">
-            <h2>1. Fixing Canvas Rendering Lag in Tetris</h2>
-            <p><strong>Problem:</strong> Canvas flickered or lagged during gameplay.</p>
-            <p><strong>What I Researched:</strong> Optimizing canvas rendering in JavaScript games.</p>
-            <p><strong>Resource:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas" target="_blank">MDN Web Docs - Canvas Optimization</a></p>
-            <p><strong>Improved Code Snippet:</strong></p>
-            <pre><code>function updateCanvas() {
-    context.clearRect(0, 0, canvas.width, canvas.height);  
-    drawArena();
-    drawPlayer();
-}</code></pre>
-            <p><strong>Why It Matters:</strong> Reduced unnecessary re-renders and improved performance.</p>
-        </div>
+        <section style="margin-top: 40px;">
+            <h2>1. Git LFS Issues with Unity Project</h2>
+            <p><strong>Problem:</strong> When pushing my Unity Paintball Game to GitHub, I ran into errors related to large file sizes.</p>
+            <p><strong>Debug Process:</strong> I researched Git Large File Storage (LFS), installed it, and then tracked `.unitypackage` and other large asset files using `git lfs track "*.ext"` syntax.</p>
+            <p><strong>Solution:</strong> I cleaned my local repository and pushed again with LFS enabled, which resolved the push failure. I also updated `.gitattributes` to prevent future size issues.</p>
+        </section>
 
-        <div class="example">
-            <h2>2. Disabling Letter Buttons After Game Ends (Hangman)</h2>
-            <p><strong>Problem:</strong> Letter buttons could be clicked even after game ended.</p>
-            <p><strong>What I Researched:</strong> How to disable buttons dynamically with JavaScript.</p>
-            <p><strong>Resource:</strong> <a href="https://stackoverflow.com/questions/11444416/how-to-disable-all-button-elements-using-javascript" target="_blank">StackOverflow - Disable Buttons</a></p>
-            <p><strong>Code Snippet:</strong></p>
-            <pre><code>function disableAllButtons() {
-    const buttons = document.querySelectorAll(".letter-button");
-    buttons.forEach(button => button.disabled = true);
-}</code></pre>
-            <p><strong>Why It Matters:</strong> Prevents invalid input after game conclusion.</p>
-        </div>
+        <section style="margin-top: 40px;">
+            <h2>2. VR Voice Recognition Failure (Quest 1)</h2>
+            <p><strong>Problem:</strong> My Meta Quest 1 project failed to recognize speech using Android’s native SpeechRecognizer API — it lacked the required voice service.</p>
+            <p><strong>Debug Process:</strong> After extensive forum and API documentation research, I discovered Quest 1 doesn’t ship with Google Voice Services by default. I explored alternatives like using Wit.ai via REST API for runtime recognition without UI prompts.</p>
+            <p><strong>Solution:</strong> I switched to a continuous listening setup using Wit.ai’s API to stream microphone input and parse results manually. This removed reliance on missing services and restored voice interaction features.</p>
+        </section>
 
-        <div class="example">
-            <h2>3. Styling Error Messages for Form Validation</h2>
-            <p><strong>Problem:</strong> Plain error text with no style cluttered the form.</p>
-            <p><strong>What I Researched:</strong> Styling and organizing form validation messages.</p>
-            <p><strong>Resource:</strong> <a href="https://css-tricks.com/form-validation-part-2-validation-html5/" target="_blank">CSS-Tricks - Form Validation UX</a></p>
-            <p><strong>JavaScript Code:</strong></p>
-            <pre><code>function showError(input, message) {
-    const errorList = input.nextElementSibling;
-    errorList.innerHTML = `<li>${message}</li>`;
-    errorList.classList.add("error-visible");
-}</code></pre>
-            <p><strong>CSS Snippet:</strong></p>
-            <pre><code>.error-visible {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 5px;
-}</code></pre>
-            <p><strong>Why It Matters:</strong> Cleaner, readable feedback improves UX and accessibility.</p>
-        </div>
+        <section style="margin-top: 40px;">
+            <h2>Takeaway</h2>
+            <p>
+                Debugging and researching are essential skills in software development. These experiences not only improved my technical proficiency but also taught me how to break down complex problems and find reliable solutions independently.
+            </p>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Bobby Corey. All rights reserved.</p>
+    </footer>
 </body>
 </html>
