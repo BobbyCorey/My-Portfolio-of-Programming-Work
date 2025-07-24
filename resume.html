@@ -1,169 +1,122 @@
 ﻿<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bobby Corey - Resume</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Bobby Corey</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #66ccff;
+            text-decoration: none;
+        }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
         main {
-            max-width: 800px;
-            margin: 50px auto;
+            max-width: 900px;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
-        .download-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            padding: 12px 20px;
-            background-color: #007acc;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-            .download-link:hover {
-                background-color: #005f99;
-            }
-
         h1, h2 {
-            color: #222;
+            color: #66ccff;
         }
 
-        section.resume-section {
+        .resume-section {
             margin-bottom: 40px;
         }
 
-        ul.skills-list, ul.project-list {
-            list-style-type: disc;
-            margin-left: 20px;
+            .resume-section ul {
+                list-style: none;
+                padding-left: 0;
+            }
+
+            .resume-section li {
+                margin: 5px 0;
+            }
+
+        .contact-info a {
+            color: #66ccff;
+            text-decoration: underline;
         }
 
-        p.contact-info {
-            margin: 0;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ccc;
-            margin: 20px 0;
+        .resume-note {
+            font-style: italic;
+            color: #bbbbbb;
         }
     </style>
 </head>
 <body>
     <header>
+        <h1>Bobby Corey</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">My Projects</a></li>
-                <li><a href="resume.html" class="active">Resume</a></li>
-                <li><a href="webresearch.html">Debugging Research</a></li>
-                <li><a href="about.html">About Me</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="webresearch.html">Web Research</a>
+            <a href="about.html">About Me</a>
         </nav>
     </header>
 
     <main>
-        <section id="title-page" style="text-align:center; margin-top:50px;">
-            <h1>Bobby Corey</h1>
-            <h2>Programming Resume</h2>
-            <p class="contact-info">10600 Cibola Loop NW Apt #728, Albuquerque, NM 87520</p>
-            <p class="contact-info">(575) 209 0688 • <a href="mailto:Gamerc111@gmail.com">Gamerc111@gmail.com</a></p>
-            <p class="contact-info">GitHub: <a href="https://github.com/bobbycorey" target="_blank" rel="noopener noreferrer">https://github.com/bobbycorey</a></p>
-            <p class="contact-info">Portfolio: <a href="https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/" target="_blank" rel="noopener noreferrer">https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/</a></p>
-
-            
-            <a href="https://github.com/BobbyCorey/My-Portfolio-of-Programming-Work/blob/master/Downloadables/BobbyCorey_Resume_EpicGames.docx%20(1).pdf" download class="download-link" aria-label="Download Bobby Corey's Resume PDF">
-                Download Resume (PDF)
-            </a>
-            
-        </section>
-
-        <hr />
+        <h2>Resume Highlights</h2>
 
         <section class="resume-section">
-            <h2>Targeted Objective</h2>
-            <p>
-                Computer Information Systems graduate with hands-on experience in game development and software testing (Unity, C#, C++).
-                Seeking the Tester III position at Epic Games to apply my skills in test case execution, bug analysis, and quality assurance for Unreal Engine production.
-            </p>
-        </section>
-
-        <hr />
-
-        <section class="resume-section">
-            <h2>Education</h2>
-            <p>
-                <strong>Associate of Applied Science – Computer Information Systems / Computer Programming</strong><br />
-                [Your College Name], Albuquerque, NM<br />
-                Expected Graduation: Spring 2025
-            </p>
-            <p>Relevant Coursework: Software Testing & Debugging · Object-Oriented Programming · Game Development with Unity</p>
-        </section>
-
-        <hr />
-
-        <section class="resume-section">
-            <h2>Technical Skills</h2>
-            <ul class="skills-list">
-                <li>Programming: C#, C++, Python (basic), JavaScript</li>
-                <li>Game Engines: Unity (C#), Unreal Engine (introductory)</li>
-                <li>Testing & QA: Manual test case execution · Bug reporting · Regression testing · Jira (familiar)</li>
-                <li>Tools: Visual Studio · Git version control · Blender · Microsoft Office · Chrome DevTools</li>
+            <h3>Education</h3>
+            <ul>
+                <li>Associate of Applied Science in Computer Information Systems – CNM (2025)</li>
+                <li>Concentration in Computer Programming</li>
             </ul>
         </section>
 
-        <hr />
-
         <section class="resume-section">
-            <h2>Relevant Experience</h2>
-            <p><strong>Freelance Game Developer & QA (Self-Initiated) — 2021 – Present</strong></p>
-            <ul class="project-list">
-                <li>Executed detailed test plans and manual test cases for Unity game builds, identifying gameplay and performance bugs.</li>
-                <li>Documented issues with clear reproduction steps and communicated findings effectively for fixes.</li>
-                <li>Applied iterative debugging and regression testing to maintain stable builds across development cycles.</li>
+            <h3>Technical Skills</h3>
+            <ul>
+                <li>Languages: C#, C++, Java, Python, JavaScript, HTML/CSS</li>
+                <li>Tools: Unity, Visual Studio, Git, Blender, Unreal Engine (basic)</li>
+                <li>Concepts: OOP, UI/UX, Game Development, Debugging, Web Development</li>
             </ul>
         </section>
 
-        <hr />
-
         <section class="resume-section">
-            <h2>Game & Software Projects</h2>
-            <ul class="project-list">
-                <li><strong>Unity Gameplay Prototypes:</strong> Developed multiple 2D/3D games using Unity and C#, including player controls, collision detection, UI, and core mechanics.</li>
-                <li>Conducted repeated testing, resolved bugs, and optimized gameplay for smooth user experiences.</li>
-                <li>Utilized Git version control and project organization best practices to track changes and collaborate.</li>
-                <li><strong>C# Local Web Application:</strong> Built a desktop-accessible C# web application with integrated UI and backend logic.</li>
-                <li>Performed manual testing on user input flows, form validation, and error handling to ensure robustness.</li>
-                <li><strong>Unreal Engine Exploration:</strong> Independently studied Unreal Engine fundamentals, focusing on level navigation, scripting basics, and debugging tools.</li>
+            <h3>Experience</h3>
+            <ul>
+                <li>Developed multiple games using Unity, including a paintball FPS and platformer RPG</li>
+                <li>Created and hosted a JavaScript-based portfolio site and interactive web games</li>
+                <li>Built tools such as a Rocket League crate animation plugin (BakkesMod)</li>
+                <li>Completed team and solo capstone projects for college coursework</li>
             </ul>
         </section>
 
-        <hr />
-
         <section class="resume-section">
-            <h2>Portfolio Highlights</h2>
-            <ul class="project-list">
-                <li>Maintained an actively updated online portfolio showcasing projects in web development, Unity games, and coding assignments.</li>
-                <li>Portfolio features live playable demos, source code links, and screenshots that demonstrate technical skills and creative problem-solving.</li>
-                <li>Website: <a href="https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/" target="_blank" rel="noopener noreferrer">https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/</a></li>
+            <h3>Links</h3>
+            <ul>
+                <li>GitHub: <a href="https://github.com/bobbycorey" target="_blank">github.com/bobbycorey</a></li>
+                <li>Portfolio: <a href="https://bobbycorey.github.io/My-Portfolio-of-Programming-Work/" target="_blank">View My Work</a></li>
             </ul>
         </section>
 
-        <hr />
-
-        <section class="resume-section">
-            <h2>Additional Strengths</h2>
-            <ul class="project-list">
-                <li>Analytical problem solver with strong attention to detail</li>
-                <li>Effective written and verbal communication skills</li>
-                <li>Comfortable working in collaborative, fast-paced team environments</li>
-                <li>Passionate about ensuring immersive, high-quality gaming experiences</li>
-            </ul>
-        </section>
+        <p class="resume-note">
+            Need my full resume with professional references and full contact details? Feel free to reach out through my GitHub or portfolio site!
+        </p>
     </main>
 
     <footer>
