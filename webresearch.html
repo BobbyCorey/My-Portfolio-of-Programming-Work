@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Debugging & Research - Bobby Corey Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        code {
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -32,11 +48,29 @@
                 <p><strong>Problem:</strong> When pushing my Unity Paintball Game to GitHub, I ran into errors related to large file sizes.</p>
                 <p><strong>Debug Process:</strong> I researched Git Large File Storage (LFS), installed it, and tracked large asset files using <code>git lfs track "*.ext"</code>.</p>
                 <p><strong>Solution:</strong> I cleaned my local repo and pushed again with LFS enabled, resolving the push failure and preventing future size issues.</p>
+                <pre><code>git lfs install
+git lfs track "*.unitypackage"
+git add .gitattributes
+git add <large files>
+git commit -m "Track large assets with Git LFS"
+git push origin main
+                </code></pre>
 
                 <h2>2. VR Voice Recognition Failure (Quest 1)</h2>
                 <p><strong>Problem:</strong> Meta Quest 1 did not support speech recognition using Android’s native API because the required voice service was missing.</p>
                 <p><strong>Debug Process:</strong> Extensive forum and API documentation research revealed Quest 1 lacks Google Voice Services by default. I explored alternatives like Wit.ai via REST API.</p>
                 <p><strong>Solution:</strong> I switched to a continuous listening setup using Wit.ai API to stream microphone input and parse results manually, restoring voice features.</p>
+                <pre><code>using System.Net.Http;
+using System.Threading.Tasks;
+
+async Task<string> SendAudioToWitAi(byte[] audioData) {
+    var httpClient = new HttpClient();
+    httpClient.DefaultRequestHeaders.Add("Authorization", "Bearer YOUR_WIT_AI_TOKEN");
+    var content = new ByteArrayContent(audioData);
+    var response = await httpClient.PostAsync("https://api.wit.ai/speech?v=20200707", content);
+    return await response.Content.ReadAsStringAsync();
+}
+                </code></pre>
 
                 <h2>Takeaway</h2>
                 <p>
