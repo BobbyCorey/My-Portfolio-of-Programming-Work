@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Debugging & Research - Bobby Corey Portfolio</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -19,32 +19,30 @@
         </nav>
     </header>
 
-    <main style="max-width: 800px; margin: 50px auto; padding: 0 20px;">
-        <h1 style="text-align: center;">Debugging & Web Research</h1>
-        <p>
-            As part of my development journey, I frequently encountered bugs and roadblocks that required in-depth debugging and research.
-            Here are a couple of real examples that highlight how I tackled those situations:
-        </p>
+    <main>
+        <section class="about-me intro">
+            <div class="intro-text" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+                <h1>Debugging & Web Research</h1>
+                <p>
+                    As part of my development journey, I frequently encountered bugs and roadblocks that required in-depth debugging and research.
+                    Here are some real examples that highlight how I tackled those situations:
+                </p>
 
-        <section style="margin-top: 40px;">
-            <h2>1. Git LFS Issues with Unity Project</h2>
-            <p><strong>Problem:</strong> When pushing my Unity Paintball Game to GitHub, I ran into errors related to large file sizes.</p>
-            <p><strong>Debug Process:</strong> I researched Git Large File Storage (LFS), installed it, and then tracked `.unitypackage` and other large asset files using `git lfs track "*.ext"` syntax.</p>
-            <p><strong>Solution:</strong> I cleaned my local repository and pushed again with LFS enabled, which resolved the push failure. I also updated `.gitattributes` to prevent future size issues.</p>
-        </section>
+                <h2>1. Git LFS Issues with Unity Project</h2>
+                <p><strong>Problem:</strong> When pushing my Unity Paintball Game to GitHub, I ran into errors related to large file sizes.</p>
+                <p><strong>Debug Process:</strong> I researched Git Large File Storage (LFS), installed it, and tracked large asset files using <code>git lfs track "*.ext"</code>.</p>
+                <p><strong>Solution:</strong> I cleaned my local repo and pushed again with LFS enabled, resolving the push failure and preventing future size issues.</p>
 
-        <section style="margin-top: 40px;">
-            <h2>2. VR Voice Recognition Failure (Quest 1)</h2>
-            <p><strong>Problem:</strong> My Meta Quest 1 project failed to recognize speech using Android’s native SpeechRecognizer API — it lacked the required voice service.</p>
-            <p><strong>Debug Process:</strong> After extensive forum and API documentation research, I discovered Quest 1 doesn’t ship with Google Voice Services by default. I explored alternatives like using Wit.ai via REST API for runtime recognition without UI prompts.</p>
-            <p><strong>Solution:</strong> I switched to a continuous listening setup using Wit.ai’s API to stream microphone input and parse results manually. This removed reliance on missing services and restored voice interaction features.</p>
-        </section>
+                <h2>2. VR Voice Recognition Failure (Quest 1)</h2>
+                <p><strong>Problem:</strong> Meta Quest 1 did not support speech recognition using Android’s native API because the required voice service was missing.</p>
+                <p><strong>Debug Process:</strong> Extensive forum and API documentation research revealed Quest 1 lacks Google Voice Services by default. I explored alternatives like Wit.ai via REST API.</p>
+                <p><strong>Solution:</strong> I switched to a continuous listening setup using Wit.ai API to stream microphone input and parse results manually, restoring voice features.</p>
 
-        <section style="margin-top: 40px;">
-            <h2>Takeaway</h2>
-            <p>
-                Debugging and researching are essential skills in software development. These experiences not only improved my technical proficiency but also taught me how to break down complex problems and find reliable solutions independently.
-            </p>
+                <h2>Takeaway</h2>
+                <p>
+                    Debugging and researching are essential skills in software development. These experiences enhanced my technical proficiency and taught me to break down complex problems and find reliable solutions independently.
+                </p>
+            </div>
         </section>
     </main>
 
