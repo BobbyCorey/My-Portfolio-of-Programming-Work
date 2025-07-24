@@ -32,8 +32,9 @@ header {
 
     /* Limit the first image size so it doesn't get too huge */
     .hero img {
-        max-width: 400px; /* limit width to 400px max */
-        width: 10%; /* scale down responsively */
+        width: auto;
+        max-width: 100%;
+        height: auto; /* scale down responsively */
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         margin-bottom: 20px;
