@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Order Item GUI (C# WinForms)</title>
+    <link rel="stylesheet" href="hangman.css" />
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Order Item GUI (C# WinForms)</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/orderitem_screenshot.png" alt="Order Item GUI Screenshot" class="project-image" onclick="openModal(this)" />
+        <h2>Windows Forms application to create custom product orders using OOP principles.</h2>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <p>
+            This project uses C# and Windows Forms to build an interactive GUI that allows users to select items (Mug, Pen, USB),
+            choose engraving text, select the number of colors, and specify the quantity. The app demonstrates strong use of
+            <strong>inheritance</strong>, <strong>encapsulation</strong>, and <strong>property-driven price calculation</strong> within the LogoOrderItem class.
+        </p>
+        <p>
+            The form handles user input and dynamically displays the order summary. This project sharpened skills in event-driven programming,
+            form controls, and class design in C#.
+        </p>
+        <p>
+            Research involved learning Windows Forms controls and designing a clean user experience with code-behind logic.
+        </p>
+        <a href="https://bobbycorey.github.io/StoreLogoGUI/" class="btn">Use GUI application</a>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="showcase">
+        <h3>Application Screenshots</h3>
+        <img src="images/orderitem_screenshot.png" alt="Order Item GUI Screenshot" class="project-image" onclick="openModal(this)" />
+    </section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage" />
+    </div>
+
+    <!-- Code Snippets Section -->
+    <section class="code-snippets">
+        <h3>Highlighted Code Sample</h3>
+        <p>LogoOrderItem class demonstrating properties and price calculation:</p>
+        <pre><code class="language-csharp">
+// C# class encapsulating order data and price logic
+public class LogoOrderItem
+{
+    private bool _hasLogo;
+    private string _itemType;
+    private int _numColors;
+    private int _numItems;
+    private string _text;
+
+    public bool HasLogo { get => _hasLogo; set { _hasLogo = value; Calc(); } }
+    public string itemType { get => _itemType; set { _itemType = value; Calc(); } }
+    public int NumColors { get => _numColors; set { _numColors = value; Calc(); } }
+    public int NumItems { get => _numItems; set { _numItems = value; Calc(); } }
+    public string Text { get => _text; set { _text = value; Calc(); } }
+
+    public decimal Price { get; private set; }
+
+    private void Calc()
+    {
+        Price = 10.00M; // Base price - extend pricing logic here
+    }
+
+    public override string ToString()
+    {
+        return $"Item Type: {itemType}, Number of Colors: {NumColors}, Number of Items: {NumItems}, Text: {Text}, Total Price: ${Price:0.##}";
+    }
+}
+        </code></pre>
+
+        <p>Button submit event showing how user input is processed and output displayed:</p>
+        <pre><code class="language-csharp">
+private void btnSubmit_Click(object sender, EventArgs e)
+{
+    bool hasLogo = chkbxLogo.Checked;
+    string text = txtbxEngravement.Text;
+    int numColors = int.Parse(txtbxNumColors.Text);
+    int numItems = int.Parse(txtbxNumItems.Text);
+
+    string itemName = " ";
+    if (rdbtnUsb.Checked) itemName = "USB";
+    if (rdbtnMug.Checked) itemName = "Mug";
+    if (rdbtnPen.Checked) itemName = "Pen";
+
+    LogoOrderItem itemOrder = new LogoOrderItem(hasLogo, itemName, numColors, numItems, text);
+    txtbxResult.Text = itemOrder.ToString();
+}
+        </code></pre>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Technologies used: C#, Windows Forms</p>
+        <p>&copy; 2025 Bobby Corey. All rights reserved.</p>
+    </footer>
+
+    <script src="hangmanModal.js"></script>
+</body>
+</html>
